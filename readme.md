@@ -1,12 +1,12 @@
 # Purpose
 
-A simple/handy little reverse proxy built using YARP that can be used for any purpose you like.
+A simple and handy little reverse proxy built using YARP that can be used for any purpose you like.
 
 Personally, I've used this within an Azure Web app to proxy calls to Azure Resources within a private vNet.
 
 # Configuration
 
-The only configuration needed is to tell the proxy the location of the endpoint you want it to proxy calls for.
+The only configuration needed is to tell the proxy where to proxy calls to.
 
 There are a couple ways you set this.
 
@@ -24,6 +24,8 @@ If you're using an Azure Web App, you can set this using an app setting with the
 `ReverseProxy__Clusters__MinimumCluster__Destinations__MyBackend__Address`
 
 Note the double underscore `(__)` in the name, that is how Azure works with the next JSON structure.
+
+I suspect this might work with environment variables too, but I haven't specifically tested it.
 
 # Other Options
 
